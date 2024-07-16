@@ -10,16 +10,15 @@ html {
 
 body {
   font-family: "JetBrains Mono";
+  background-color: #e2e8f0;
 }
 
 #container {
+  background-color: #f1f5f9;
   display: flex;
   flex-wrap: wrap;
   width: 24rem;
   height: 24rem;
-  outline-style: solid;
-  outline-width: 1px;
-  outline-color: #e2e8f0;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 

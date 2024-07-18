@@ -22,7 +22,11 @@ body {
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
-.square {
+#square {
   width: 2rem;
   height: 2rem;
 }
+/**/
+/* #square:hover { */
+/*   background-color: #ccc; */
+/* } */

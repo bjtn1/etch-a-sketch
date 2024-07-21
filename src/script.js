@@ -1,43 +1,39 @@
-const div_container = document.getElementById("container");
+const grid = document.querySelector(".grid");
 
+const grid_size = 640;
 
-function create_grid(size) {
-  let container_width       = size * 32;
-  let container_height      = size * 32;
-  let container_bg_color    = "#f1f5f9";
-  let container_box_shadow  = "0 25px 50px -12px rgb(0 0 0 / 0.25)";
+// TODO
+// 1. find a sensible size for the grid
+// 2. find  sensible size for the square in thr grid
+// the grid's area is 640 by 640 = 409,600
 
-  div_container.style.width            = `${container_width}px`;
-  div_container.style.height           = `${container_height}px`;
-  div_container.style.backgroundColor  = `${container_bg_color}`;
-  div_container.style.boxShadow        = `${container_box_shadow}`;
-  div_container.style.display          = "flex";
-  div_container.style.flexWrap         = "wrap";
+function create_grid(square_size) {
+  for (let row = 0; row < square_size; row++) {
+    for (let col = 0; col < square_size; col++) {
+      const square = document.createElement("div");
 
-  for (let row = 0; row < size; row++) {
-    for (let col = 0; col < size; col++) {
-      const div = document.createElement("div");
+      square.classList.add("square");
 
-      div.setAttribute("id", "square");
-      div.classList.add("square");
+      let width    = grid_size / square_size;
+      let height   = grid_size / square_size;
 
-      let width   = size * 2;
-      let height  = size * 2;
+      square.style.width   = `${width}px`;
+      square.style.height  = `${height}px`;
 
-      div.style.width   = `${width}px`;
-      div.style.height  = `${height}px`;
+      // if (row % 2 === 0 && col % 2 === 0) {
+      //   square.style.outlineStyle = "solid";
+      // }
 
-      div.addEventListener("mouseover", () => {
-        div.style.backgroundColor = "#000000";
-      });
+      // TODO handel mousedown and mouseover event simultaneously
 
-      // div.addEventListener("mouseout", () => {
-      //   div.style.backgroundColor = "#f1f5f9";
-      // })
+      square.onmouseover = () => {
+        square.style.backgroundColor = "#000000";
+      }
 
-      div_container.appendChild(div);
+      grid.appendChild(square);
     }
   }
 }
+
 
 create_grid(16);

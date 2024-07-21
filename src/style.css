@@ -12,3 +12,12 @@ body {
 .header {
   text-align: center;
 }
+
+.grid {
+  width: 640px;
+  height: 640px;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  background-color: #f1f5f9;
+  display: flex;
+  flex-wrap: wrap;
+}

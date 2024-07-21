@@ -1,11 +1,19 @@
 const grid = document.querySelector(".grid");
-
 const grid_size = 640;
 
-// TODO
-// 1. find a sensible size for the grid
-// 2. find  sensible size for the square in thr grid
-// the grid's area is 640 by 640 = 409,600
+let mousedown = false;
+document.body.onmousedown = () => {mousedown = true}
+document.body.onmouseup = () => {mousedown = false}
+
+
+function draw(e) {
+  if (e.type === "mouseover" && !mousedown) {
+    return;
+  }
+
+  e.target.style.backgroundColor = "#000000";
+}
+
 
 function create_grid(square_size) {
   for (let row = 0; row < square_size; row++) {
@@ -20,15 +28,8 @@ function create_grid(square_size) {
       square.style.width   = `${width}px`;
       square.style.height  = `${height}px`;
 
-      // if (row % 2 === 0 && col % 2 === 0) {
-      //   square.style.outlineStyle = "solid";
-      // }
-
-      // TODO handel mousedown and mouseover event simultaneously
-
-      square.onmouseover = () => {
-        square.style.backgroundColor = "#000000";
-      }
+      square.addEventListener("mouseover", draw);
+      square.addEventListener("mousedown", draw);
 
       grid.appendChild(square);
     }

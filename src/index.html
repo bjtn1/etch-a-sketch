@@ -1,15 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Etch-a-sketch</title>
-    <link href="style.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
-    <script defer src="script.js"></script>
-  </head>
-  <body>
-    <h1 class="header">Etch-a-sketch!</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Etch-a-sketch</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=JetBrains Mono" rel="stylesheet" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <h1 class="header">Etch-a-sketch!</h1>
+  <main>
+    <div class="menu">
+      <div class="main-menu-button">Change color</div>
+      <div class="main-menu-button">Clear grid</div>
+      <div class="main-menu-button">Change grid dimensions</div>
+      <div class="current-grid-dimensions"></div>
+    </div>
     <div class="grid"></div>
-  </body>
+  </main>
+</body>
+
 </html>

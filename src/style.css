@@ -1,12 +1,43 @@
-html {
-  display: flex;
-  align-self: center;
-  justify-content: center;
-}
-
 body {
   font-family: "JetBrains Mono";
   background-color: #e2e8f0;
+}
+
+main {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 640px;
+  height: 640px;
+  /* this is tailwindccss' text-2xl */
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.main-menu-button {
+  outline-style: solid;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  outline-width: 1.5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100%;
+  /* height: 25%; */
+}
+
+.main-menu-button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition-duration: 300ms;
+  /* this is tailwindcss' ease-in-out transition timing function */
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header {

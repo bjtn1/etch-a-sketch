@@ -6,13 +6,17 @@ let mousedown = false;
 document.body.onmousedown = () => {mousedown = true}
 document.body.onmouseup = () => {mousedown = false}
 
+let color = "#808080"
+let color_picker = document.querySelector(".color-picker");
+color_picker.addEventListener("input", change_color, false);
+
 
 function draw(e) {
   if (e.type === "mouseover" && !mousedown) {
     return;
   }
 
-  e.target.style.backgroundColor = "#000000";
+  e.target.style.backgroundColor = color;
 }
 
 
@@ -57,8 +61,8 @@ function clear_grid() {
 }
 
 
-function change_color(color){
-
+function change_color(event){
+  color = event.target.value;
 }
 
 
@@ -83,4 +87,4 @@ function change_dimensions() {
 }
 
 
-create_grid(64);
+create_grid(16);

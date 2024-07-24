@@ -38,6 +38,13 @@ main {
   align-items: center;
 }
 
+input {
+  border: 0;
+  height: 44px;
+  margin: 0;
+  background: transparent;
+}
+
 .main-menu-button {
   outline-style: solid;
   margin-bottom: 0.5rem;

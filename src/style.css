@@ -10,9 +10,6 @@ main {
 }
 
 .menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 640px;
   height: 640px;
   /* this is tailwindccss' text-2xl */
@@ -21,15 +18,33 @@ main {
   line-height: 2rem;
 }
 
+.buttons-section,
+.current-grid-dimensions-section {
+  width: 640px;
+  height: 320px;
+}
+
+.buttons-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.current-grid-dimensions-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .main-menu-button {
   outline-style: solid;
-  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   outline-width: 1.5px;
   padding-top: 6px;
   padding-bottom: 6px;
   width: 100%;
-  /* height: 25%; */
 }
 
 .main-menu-button:hover {

@@ -9,6 +9,7 @@ document.body.onmouseup = () => {mousedown = false}
 let color = "#808080"
 let color_picker = document.querySelector(".color-picker");
 color_picker.addEventListener("input", change_color, false);
+color_picker.addEventListener("change", change_color, false);
 
 
 function draw(e) {
@@ -17,6 +18,11 @@ function draw(e) {
   }
 
   e.target.style.backgroundColor = color;
+}
+
+
+function erase() {
+  color = default_grid_color;
 }
 
 

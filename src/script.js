@@ -29,12 +29,22 @@ function create_grid(grid_dimensions) {
       square.style.width   = `${width}px`;
       square.style.height  = `${height}px`;
 
+      square.style.outlineStyle = "solid";
+      square.style.outlineWidth = "1px";
+
       square.addEventListener("mouseover", draw);
       square.addEventListener("mousedown", draw);
 
       grid.appendChild(square);
     }
   }
+  // we call `clear_grid()` because it makes the outlines thinner and pretty.
+  // (bjtn) I don't know why that happens
+  clear_grid();
+
+  // now we update the dimensions text
+  let current_dimensions_div = document.querySelector(".current-dimensions-div");
+  current_dimensions_div.innerHTML = `${grid_dimensions} x ${grid_dimensions}`;
 }
 
 
@@ -47,4 +57,30 @@ function clear_grid() {
 }
 
 
-create_grid(16);
+function change_color(color){
+
+}
+
+
+function remove_old_grid() {
+  let old_grid_squares = grid.querySelectorAll(".square");
+
+  for (let i = 0; i < old_grid_squares.length; i++) {
+    old_grid_squares[i].remove();
+  }
+}
+
+
+function change_dimensions() {
+  let new_dimensions = Number(prompt("Enter an integer between 1 (inclusive) and 100 (inclusive)"));
+  
+  while (new_dimensions < 1 || new_dimensions > 100) {
+    new_dimensions = Number(prompt("Invalid number. Please enter an integer between 1 (inclusive) and 100 (inclusive)"));
+  }
+
+  remove_old_grid();
+  create_grid(new_dimensions);
+}
+
+
+create_grid(64);

@@ -1,3 +1,20 @@
+.header {
+  text-align: center;
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+}
+
+.fa-github {
+  color: black;
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: scale(1.5);
+  transition-duration: 300ms;
+}
+
 body {
   font-family: "JetBrains Mono";
   background-color: #e2e8f0;
@@ -12,8 +29,8 @@ main {
 .menu {
   width: 640px;
   height: 640px;
-  /* this is tailwindccss' text-2xl */
   text-align: center;
+  /* this is tailwindccss' text-2xl */
   font-size: 1.5rem;
   line-height: 2rem;
 }
@@ -31,15 +48,12 @@ main {
 .buttons-section {
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-end; */
   align-items: center;
 }
 
 .current-status-section {
   display: flex;
-  /* flex-direction: column; */
   justify-content: space-around;
-  /* align-items: ; */
 }
 
 .current-color-section {
@@ -79,10 +93,6 @@ input {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header {
-  text-align: center;
-}
-
 .grid {
   width: 640px;
   height: 640px;
@@ -90,4 +100,8 @@ input {
   background-color: #f1f5f9;
   display: flex;
   flex-wrap: wrap;
+}
+
+footer {
+  text-align: center;
 }

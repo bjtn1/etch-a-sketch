@@ -13,6 +13,10 @@ color_picker.addEventListener("change", change_color, false);
 color_picker.select();
 
 
+// const footer = document.querySelector("footer");
+// footer.innerHTML = `Copyright © ${new Date().getFullYear()} Brandon Jose Tenorio Noguera`;
+
+
 function draw(e) {
   if (e.type === "mouseover" && !mousedown) {
     return;

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Etch-a-sketch</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=JetBrains Mono" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <nav>
+    <h1 class="header">Etch-a-sketch!</h1>
+  </nav>
+
+  <main>
+    <div class="menu">
+
+      <div class="current-status-section">
+        <div class="current-color-section">
+          <div class="current-color-text">Current color:</div>
+          <div class="current-color-div"></div>
+        </div>
+
+        <div class="current-dimensions-section">
+          <div class="current-dimensions-text">Current dimensions:</div>
+          <div class="current-dimensions-div">16 x 16</div>
+        </div>
+      </div>
+
+      <div class="buttons-section">
+        <input class="main-menu-button color-picker" type="color" value="#808080">
+        <div class="main-menu-button" onclick="erase()">Eraser</div>
+        <div class="main-menu-button" onclick="clear_grid()">Clear grid</div>
+        <div class="main-menu-button" onclick="change_dimensions()">Change grid dimensions</div>
+      </div>
+
+
+    </div>
+
+    <div class="grid"></div>
+  </main>
+
+  <footer>
+    Copyright ©
+    <script>document.write(new Date().getFullYear())</script>
+    Brandon Jose Tenorio Noguera
+    <a href="https://github.com/bjtn1/etch-a-sketch">
+      <i class="fa fa-github" style="font-size:24px"></i>
+    </a>
+  </footer>
+</body>
+
+</html>

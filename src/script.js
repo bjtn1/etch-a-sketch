@@ -13,10 +13,6 @@ color_picker.addEventListener("change", change_color, false);
 color_picker.select();
 
 
-// const footer = document.querySelector("footer");
-// footer.innerHTML = `Copyright © ${new Date().getFullYear()} Brandon Jose Tenorio Noguera`;
-
-
 function draw(e) {
   if (e.type === "mouseover" && !mousedown) {
     return;
@@ -28,7 +24,6 @@ function draw(e) {
 
 function erase() {
   current_color = default_grid_color;
-  update_current_color_div();
 }
 
 
@@ -61,16 +56,6 @@ function create_grid(grid_dimensions) {
   // now we update the dimensions text
   let current_dimensions_div = document.querySelector(".current-dimensions-div");
   current_dimensions_div.innerHTML = `${grid_dimensions} x ${grid_dimensions}`;
-
-
-  // update the current color div
-  update_current_color_div();
-}
-
-
-function update_current_color_div() {
-  let current_color_div = document.querySelector(".current-color-div");
-  current_color_div.style.backgroundColor = current_color;
 }
 
 
@@ -85,7 +70,6 @@ function clear_grid() {
 
 function change_color(event){
   current_color = event.target.value;
-  update_current_color_div();
 }
 
 

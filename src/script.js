@@ -6,10 +6,11 @@ let mousedown = false;
 document.body.onmousedown = () => {mousedown = true}
 document.body.onmouseup = () => {mousedown = false}
 
-let color = "#808080"
+let current_color = "#808080"
 let color_picker = document.querySelector(".color-picker");
 color_picker.addEventListener("input", change_color, false);
 color_picker.addEventListener("change", change_color, false);
+color_picker.select();
 
 
 function draw(e) {
@@ -17,12 +18,13 @@ function draw(e) {
     return;
   }
 
-  e.target.style.backgroundColor = color;
+  e.target.style.backgroundColor = current_color;
 }
 
 
 function erase() {
-  color = default_grid_color;
+  current_color = default_grid_color;
+  update_current_color_div();
 }
 
 
@@ -55,6 +57,16 @@ function create_grid(grid_dimensions) {
   // now we update the dimensions text
   let current_dimensions_div = document.querySelector(".current-dimensions-div");
   current_dimensions_div.innerHTML = `${grid_dimensions} x ${grid_dimensions}`;
+
+
+  // update the current color div
+  update_current_color_div();
+}
+
+
+function update_current_color_div() {
+  let current_color_div = document.querySelector(".current-color-div");
+  current_color_div.style.backgroundColor = current_color;
 }
 
 
@@ -68,7 +80,8 @@ function clear_grid() {
 
 
 function change_color(event){
-  color = event.target.value;
+  current_color = event.target.value;
+  update_current_color_div();
 }
 
 

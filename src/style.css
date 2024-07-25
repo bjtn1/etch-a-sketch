@@ -18,24 +18,41 @@ main {
   line-height: 2rem;
 }
 
-.buttons-section,
-.current-grid-dimensions-section {
+.buttons-section {
   width: 640px;
-  height: 320px;
+  height: 430px;
+}
+
+.current-status-section {
+  width: 640px;
+  height: 210px;
 }
 
 .buttons-section {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   align-items: center;
 }
 
-.current-grid-dimensions-section {
+.current-status-section {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  /* align-items: ; */
+}
+
+.current-color-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+.current-color-div {
+  height: 80px;
+  width: 80px;
+  outline-style: solid;
+  outline-width: .5px;
 }
 
 input {
@@ -47,8 +64,8 @@ input {
 
 .main-menu-button {
   outline-style: solid;
-  margin-bottom: 0.5rem;
   outline-width: 1.5px;
+  margin-bottom: 0.5rem;
   padding-top: 6px;
   padding-bottom: 6px;
   width: 100%;

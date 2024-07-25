@@ -14,18 +14,29 @@
   <h1 class="header">Etch-a-sketch!</h1>
   <main>
     <div class="menu">
+
+      <div class="current-status-section">
+        <div class="current-dimensions-section">
+          <div class="current-dimensions-text">Current dimensions:</div>
+          <div class="current-dimensions-div">16 x 16</div>
+        </div>
+
+        <div class="current-color-section">
+          <div class="current-color-text">Current color:</div>
+          <div class="current-color-div"></div>
+        </div>
+      </div>
+
       <div class="buttons-section">
         <input class="main-menu-button color-picker" type="color" value="#808080">
         <div class="main-menu-button" onclick="erase()">Eraser</div>
         <div class="main-menu-button" onclick="clear_grid()">Clear grid</div>
         <div class="main-menu-button" onclick="change_dimensions()">Change grid dimensions</div>
       </div>
-      <div class="current-grid-dimensions-section">
-        Current dimensions:
-        <br />
-        <div class="current-dimensions-div">16 x 16</div>
-      </div>
+
+
     </div>
+
     <div class="grid"></div>
   </main>
 </body>
